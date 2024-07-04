@@ -97,7 +97,7 @@ Install with the package manager:
 1. Open the Package Manager from `Window > Package Manager`
 2. Click the '+' button in the top-left of the window
 3. Click 'Add package from git URL'
-4. Provide the URL of the this git repository: `https://github.com/nomnomab/unity-project-patcher-bepinex.git`
+4. Provide the URL of the this git repository: `https://github.com/nomnomab/Unity-Editor-BepInEx.git`
 - If you are using a specific version, you can append it to the end of the git URL, such as `#v1.2.3`
 5. Click the 'add' button
 
@@ -107,7 +107,7 @@ Install with the manifest.json:
 2. Insert the following as an entry:
 
 ```json
-"com.nomnom.unity-project-patcher-bepinex": "https://github.com/nomnomab/unity-project-patcher-bepinex.git"
+"com.nomnom.unity-editor-bepinex": "https://github.com/nomnomab/Unity-Editor-BepInEx.git"
 ```
 
 - If you are using a specific version, you can append it to the end of the git URL, such as `#v1.2.3`
