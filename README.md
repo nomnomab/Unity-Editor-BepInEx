@@ -53,6 +53,7 @@ public sealed class Foo: MonoBehaviour {
 ```
 
 ```csharp
+#if UNITY_EDITOR
 using BepInEx;
 using HarmonyLib;
 using UnityEngine;
@@ -81,6 +82,7 @@ static class TestPatches {
         Debug.Log($"[get] {__instance}.Property set to {__result}");
     }
 }
+#endif
 ```
 
 For more patching documentation, make sure to look at the [Harmony](https://harmony.pardeike.net/articles/patching.html) docs!
