@@ -72,13 +72,13 @@ public sealed class TestPlugin: BaseUnityPlugin {
 static class TestPatches {
     [HarmonyPatch(MethodType.Setter)]
     [HarmonyPostfix]
-    static void OnCameraSetter(int value, object __instance) {
+    static void OnSetter(int value, object __instance) {
         Debug.Log($"[set] {__instance}.Property set to {value}");
     }
     
     [HarmonyPatch(MethodType.Getter)]
     [HarmonyPostfix]
-    static void OnCameraGetter(int __result, object __instance) {
+    static void OnGetter(int __result, object __instance) {
         Debug.Log($"[get] {__instance}.Property set to {__result}");
     }
 }
