@@ -195,8 +195,9 @@ namespace Nomnom.BepInEx.Editor {
         private static void AssignManagedData(params string[] pluginsPaths) {
             // ManagedPath
             var managedPathProject = Path.Combine(Application.dataPath, "..", "Library", "ScriptAssemblies");
-            var managedPath = @"C:\Program Files\Unity\Hub\Editor\2022.1.24f1\Editor\Data\Managed";
-            var managedPath2 = @"C:\Program Files\Unity\Hub\Editor\2022.1.24f1\Editor\Data\NetStandard\ref\2.1.0";
+            var editorPath = Path.Combine(EditorApplication.applicationPath, "..");
+            var managedPath = $@"{editorPath}\Data\Managed";
+            var managedPath2 = $@"{editorPath}\Data\NetStandard\ref\2.1.0";
             var managedPathProperty = typeof(Paths).GetProperty("ManagedPath");
             managedPathProperty.SetValue(null, managedPath);
             Print($" - <color=gray>set ManagedPath to \"{managedPath}\"</color>");
